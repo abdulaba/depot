@@ -1,22 +1,23 @@
-<div id="<%= dom_id product %>">
-  <p>
-    <strong>Title:</strong>
-    <%= product.title %>
-  </p>
+<div id="<%= dom_id product %>", class="d-flex border">
+  <div class="ms-2 mt-2 shadow mb-2">
+    <p>
+      <%= image_tag product.image_url, size: "150x250" %>
+    </p>
+  </div>
+  <div class="ms-3">
+    <p>
+      <%= product.title %>
+    </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= product.description %>
-  </p>
+    <p class="me-2">
+      <%= product.description %>
+    </p>
+    
+    <p class="text-end me-2 mt-5 text-success">
+      <strong>Price:</strong>
+      <%= product.price %>
+    </p>
+  </div>
 
-  <p>
-    <strong>Image url:</strong>
-    <%= product.image_url %>
-  </p>
-
-  <p>
-    <strong>Price:</strong>
-    <%= product.price %>
-  </p>
 
 </div>
