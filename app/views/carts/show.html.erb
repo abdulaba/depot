@@ -1,10 +1,13 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @cart %>
-
-<div>
-  <%= link_to "Edit this cart", edit_cart_path(@cart) %> |
-  <%= link_to "Back to carts", carts_path %>
-
-  <%= button_to "Destroy this cart", @cart, method: :delete %>
+<div class="flex-column">
+  <p style="color: green"><%= notice %></p>
+  
+  <% @cart.line_items.each do |line_item| %>
+    <p><%= line_item.quantity %> <%= line_item.product.title %><%= line_item.price %> <%= line_item.quantity * line_item.price %></p>
+  <% end %>
+  <div>
+    <%= link_to "Edit this cart", edit_cart_path(@cart) %> |
+    <%= link_to "Back to carts", carts_path %>
+  
+    <%= button_to "Destroy this cart", @cart, method: :delete %>
+  </div>
 </div>

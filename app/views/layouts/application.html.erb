@@ -12,9 +12,11 @@
 
   <body>
     <%= render "shared/navbar" %>
-    <div class="d-flex">
-      <%= render "shared/sidebar" %>
-      <%= yield %>
+    <div class="container-fluid">
+      <div class="row">
+        <%= render "shared/sidebar" %>
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>
