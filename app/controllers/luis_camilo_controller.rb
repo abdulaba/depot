@@ -1,0 +1,2 @@
+class LuisCamiloController < ApplicationController
+end
