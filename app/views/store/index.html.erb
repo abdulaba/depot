@@ -1,4 +1,5 @@
 <div class="ms-5 mt-4">
+  <%= notice %>
   <% @products.each do |product| %>
     <%= render "products/product", product: product %>
   <% end %>
